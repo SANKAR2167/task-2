@@ -42,6 +42,16 @@ function Header() {
         </div>
         <Button variant="contained"><ShoppingCartIcon/> Cart {}</Button>
       </nav>
+      <Template/>
+    </div>
+  )
+}
+
+function Template(){
+  return (
+    <div className='template'>
+      <h2>Shop in style</h2>
+      <p className='para'>with this shop homepage template</p>
     </div>
   )
 }
