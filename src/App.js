@@ -39,7 +39,7 @@ function Header() {
               </div>
             </li>
             <li>
-            <Button variant="contained"><ShoppingCartIcon/> Cart {}</Button>
+            <Button className='cart' variant="contained"><ShoppingCartIcon/> Cart {}</Button>
             </li>
           </ul>
         </div>
