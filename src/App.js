@@ -38,9 +38,11 @@ function Header() {
                 <a class="dropdown-item" href="#">New Arrivals</a>
               </div>
             </li>
+            <li>
+            <Button variant="contained"><ShoppingCartIcon/> Cart {}</Button>
+            </li>
           </ul>
         </div>
-        <Button variant="contained"><ShoppingCartIcon/> Cart {}</Button>
       </nav>
       <Template/>
     </div>
@@ -58,7 +60,65 @@ function Template(){
 }
 
 function Product() {
-  const productList = []
+  const productList = [{
+    image:'url',
+    sale:null,
+    name:'Fancy product',
+    rating:null,
+    price:'$40.00 - $80.00',
+    button:'View options',
+  },
+  {
+    image:'url',
+    sale:'Sale',
+    name:'Special Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$20.00 $18.00',
+    button:'Add to cart',
+  },
+  {
+    image:'url',
+    sale:'Sale',
+    name:'Sale Item',
+    rating:null,
+    price:'$40.00 $25.00',
+    button:'Add to cart',
+  },{
+    image:'url',
+    sale:null,
+    name:'Popular Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$40.00',
+    button:'Add to cart',
+  },{
+    image:'url',
+    sale:'Sale',
+    name:'Sale Item',
+    rating:null,
+    price:'$50.00 $25.00',
+    button:'Add to cart',
+  },{
+    image:'url',
+    sale:null,
+    name:'Fancy product',
+    rating:null,
+    price:'$120.00 - $280.00',
+    button:'View options',
+  },{
+    image:'url',
+    sale:'Sale',
+    name:'Special Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$20.00 $18.00',
+    button:'Add to cart',
+  },{
+    image:'url',
+    sale:null,
+    name:'Popular Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$40.00',
+    button:'Add to cart',
+  }];
   return(
     <div>
       
