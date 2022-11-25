@@ -29,7 +29,7 @@ function Header() {
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true">
                 Shop
               </a>
               <div class="dropdown-menu">
@@ -52,6 +52,16 @@ function Template(){
     <div className='template'>
       <h2 className='fh2'>Shop in style</h2>
       <p className='para'>with this shop homepage template</p>
+      <Product/>
+    </div>
+  )
+}
+
+function Product() {
+  const productList = []
+  return(
+    <div>
+      
     </div>
   )
 }
