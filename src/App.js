@@ -50,7 +50,7 @@ function Header() {
 function Template(){
   return (
     <div className='template'>
-      <h2>Shop in style</h2>
+      <h2 className='fh2'>Shop in style</h2>
       <p className='para'>with this shop homepage template</p>
     </div>
   )
