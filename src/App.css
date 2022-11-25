@@ -7,6 +7,6 @@
     color: white;
 }
 .cart{
-    align-items: right;
+    justify-content: right;
     display: flex;
 }
