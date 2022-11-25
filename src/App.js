@@ -1,5 +1,6 @@
 import './App.css';
-
+import Button from '@mui/material/Button';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 function App() {
   return (
     <div className="App">
@@ -39,6 +40,7 @@ function Header() {
             </li>
           </ul>
         </div>
+        <Button variant="contained"><ShoppingCart/> Cart {}</Button>
       </nav>
     </div>
   )
