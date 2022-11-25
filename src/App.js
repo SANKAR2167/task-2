@@ -120,8 +120,17 @@ function Product() {
     button:'Add to cart',
   }];
   return(
-    <div>
-      
+    <div className='container-md'>
+      <div class="card" style="width: 18rem;">
+        <img src={productList.image} class="card-img-top" alt={productList.name}/>
+        <div class="card-body">
+          <h5 class="card-title">{productList.name}</h5>
+          <p>{productList.sale}</p>
+          <p>{productList.rating}</p>
+          <p>{productList.price}</p>
+          <a href="#" class="btn btn-primary">{productList.button}</a>
+        </div>
+      </div>
     </div>
   )
 }
