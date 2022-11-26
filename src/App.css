@@ -10,3 +10,25 @@
     justify-content: right;
     display: flex;
 }
+
+.product-card{
+    width: 350px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 5px;
+    padding-bottom: 7px;
+}
+
+.product-container{
+    margin-top: 30px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.product-image{
+    width: 100%;
+}

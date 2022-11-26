@@ -1,41 +1,114 @@
 import './App.css';
 import Button from '@mui/material/Button';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Badge from '@mui/material/Badge';
 function App() {
+  const productLists = [{
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:null,
+    name:'Fancy product',
+    rating:null,
+    price:'$40.00 - $80.00',
+    offerprice:null,
+    button:'View options',
+  },
+  {
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:'Sale',
+    name:'Special Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$20.00',
+    offerprice:'$18.00',
+    button:'Add to cart',
+  },
+  {
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:'Sale',
+    name:'Sale Item',
+    rating:null,
+    price:'$40.00',
+    offerprice:'$25.00',
+    button:'Add to cart',
+  },{
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:null,
+    name:'Popular Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$40.00',
+    offerprice:null,
+    button:'Add to cart',
+  },{
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:'Sale',
+    name:'Sale Item',
+    rating:null,
+    price:'$50.00',
+    offerprice:'$25.00',
+    button:'Add to cart',
+  },{
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:null,
+    name:'Fancy product',
+    rating:null,
+    price:'$120.00 - $280.00',
+    offerprice:null,
+    button:'View options',
+  },{
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:'Sale',
+    name:'Special Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$20.00',
+    offerprice:'$18.00',
+    button:'Add to cart',
+  },{
+    image:'https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg',
+    sale:null,
+    name:'Popular Item',
+    rating:'⭐⭐⭐⭐⭐',
+    price:'$40.00',
+    offerprice:null,
+    button:'Add to cart',
+  }];
+  
   return (
     <div className="App">
       
       <Header/>
+      <Template/>
+      <div className='product-container'>
+      {productLists.map(prl =><Product product={prl}/>)}
+      </div>
+      
+      
     </div>
   );
 }
 
-export default App;
-
 function Header() {
   return(
     <div className='header'>
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">Shoping Website</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <a className="navbar-brand" href="#">Shoping Website</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+            <li className="nav-item">
+              <a className="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="true">
                 Shop
               </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">All Products</a>
-                <a class="dropdown-item" href="#">Popular Items</a>
-                <a class="dropdown-item" href="#">New Arrivals</a>
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#">All Products</a>
+                <a className="dropdown-item" href="#">Popular Items</a>
+                <a className="dropdown-item" href="#">New Arrivals</a>
               </div>
             </li>
             <li>
@@ -44,93 +117,35 @@ function Header() {
           </ul>
         </div>
       </nav>
-      <Template/>
+      
     </div>
   )
 }
 
 function Template(){
+  
   return (
     <div className='template'>
       <h2 className='fh2'>Shop in style</h2>
       <p className='para'>with this shop homepage template</p>
-      <Product/>
     </div>
   )
 }
 
-function Product() {
-  const productList = [{
-    image:'url',
-    sale:null,
-    name:'Fancy product',
-    rating:null,
-    price:'$40.00 - $80.00',
-    button:'View options',
-  },
-  {
-    image:'url',
-    sale:'Sale',
-    name:'Special Item',
-    rating:'⭐⭐⭐⭐⭐',
-    price:'$20.00 $18.00',
-    button:'Add to cart',
-  },
-  {
-    image:'url',
-    sale:'Sale',
-    name:'Sale Item',
-    rating:null,
-    price:'$40.00 $25.00',
-    button:'Add to cart',
-  },{
-    image:'url',
-    sale:null,
-    name:'Popular Item',
-    rating:'⭐⭐⭐⭐⭐',
-    price:'$40.00',
-    button:'Add to cart',
-  },{
-    image:'url',
-    sale:'Sale',
-    name:'Sale Item',
-    rating:null,
-    price:'$50.00 $25.00',
-    button:'Add to cart',
-  },{
-    image:'url',
-    sale:null,
-    name:'Fancy product',
-    rating:null,
-    price:'$120.00 - $280.00',
-    button:'View options',
-  },{
-    image:'url',
-    sale:'Sale',
-    name:'Special Item',
-    rating:'⭐⭐⭐⭐⭐',
-    price:'$20.00 $18.00',
-    button:'Add to cart',
-  },{
-    image:'url',
-    sale:null,
-    name:'Popular Item',
-    rating:'⭐⭐⭐⭐⭐',
-    price:'$40.00',
-    button:'Add to cart',
-  }];
+function Product({product}) {
+  
   return(
-    <div className='container-md'>
-      <div class="card" style="width: 18rem;">
-        <img src={productList.image} class="card-img-top" alt={productList.name}/>
-        <div class="card-body">
-          <h5 class="card-title">{productList.name}</h5>
-          <p>{productList.sale}</p>
-          <p>{productList.rating}</p>
-          <p>{productList.price}</p>
-          <a href="#" class="btn btn-primary">{productList.button}</a>
-        </div>
-      </div>
+    <div className='product-card'>
+      <Badge badgeContent={product.sale} color="primary">
+      <img className='product-image' src={product.image} alt={product.name}/>
+      </Badge>
+      <h3>{product.name}</h3>
+      <p>{product.rating}</p>
+      <p> <s>{product.offerprice}</s> {product.price}</p>
+      <Button className='add card' variant="contained">{product.button}</Button>
     </div>
   )
+  
 }
+
+export default App;
