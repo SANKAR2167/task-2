@@ -142,7 +142,7 @@ function Product({product}) {
       <h3>{product.name}</h3>
       <p>{product.rating}</p>
       <p> <s>{product.offerprice}</s> {product.price}</p>
-      <Button className='add card' variant="contained">{product.button}</Button>
+      <Button className='add-cart' variant="contained">{product.button}</Button>
     </div>
   )
   
